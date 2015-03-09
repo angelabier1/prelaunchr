@@ -37,10 +37,17 @@ gem 'unicorn'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
+
+group :production do
+	gem 'pg'
+end
+
+group :development, :test do
+	gem 'sqlite3'
+end
